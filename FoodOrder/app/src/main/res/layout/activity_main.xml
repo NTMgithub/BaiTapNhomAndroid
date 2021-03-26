@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:src="@drawable/logo"
+            />
+
+        <!-- Layout địa chỉ -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="14dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/locationlogo"
+                android:paddingRight="5dp"
+                />
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40 Trần Phú, Phường 4, Quận 5"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+        <!-- Layout số điện thoại -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/phoneIcon"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/phonelogo"
+                android:paddingRight="5dp"
+                />
+
+            <TextView
+                android:id="@+id/phoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0345233432"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Line chia header với nội dung-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <!-- Nội dung app -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textTSTT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trà sữa truyền thống"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- Layout chọn size -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="30dp"
+                >
+
+                <TextView
+                    android:id="@+id/chonSizeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:text="Chọn size"
+                    />
+                <RadioGroup
+                    android:id="@+id/radioChonSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/sizeM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="M (Nhỏ)"
+                        android:textSize="12dp"
+                        android:checked="true"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/sizeL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="L (Lớn)"
+                        android:textSize="12dp" />
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+            <!-- Layout chọn mức đường -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/chonMucDuongText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:text="Mức đường"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/radioChonDuong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/duong100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="100% đường"
+                        android:textSize="12dp"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/duong50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="50% đường"
+                        android:textSize="12dp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- Layout chọn mức đá -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/chonMucDaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mức đá"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioChonDa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/da100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="100% đá"
+                        android:textSize="12dp"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/da50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="50% đá"
+                        android:textSize="12dp" />
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Layout chọn topping-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/chonToppingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thêm topping"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/tranChauDen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Trân châu đen"
+                    android:paddingRight="30dp"
+                    android:textSize="12dp" />
+
+                <CheckBox
+                    android:id="@+id/tranChauTrang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Trân châu trắng"
+                    android:textSize="12dp" />
+
+                <CheckBox
+                    android:id="@+id/kemCheese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Kem cheese"
+                    android:textSize="12dp" />
+
+                <CheckBox
+                    android:id="@+id/puddingPhoMai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Pudding phô mai"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/thachRauCau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Thạch rau câu"
+                    android:paddingRight="30dp"
+                    android:textSize="12dp" />
+
+                <CheckBox
+                    android:id="@+id/thachTraiCay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Thạch trái cây"
+                    android:paddingRight="30dp"
+                    android:textSize="12dp" />
+
+                <CheckBox
+                    android:id="@+id/banhFlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Bánh Flan"
+                    android:paddingRight="30dp"
+                    android:textSize="12dp" />
+
+                <CheckBox
+                    android:id="@+id/tranChauOkinawa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Trân châu Okinawa"
+                    android:paddingRight="30dp"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+
+            >
+
+            <Button
+                android:id="@+id/buttonXemDiaChi"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Xem địa chỉ"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:backgroundTint ="@color/button_xemdiachi"
+                android:layout_marginRight="60dp"
+                />
+
+            <Button
+                android:id="@+id/buttonDatNgay"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="Đặt ngay"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                android:backgroundTint ="@color/button_color"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
