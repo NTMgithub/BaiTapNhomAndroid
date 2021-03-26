@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:src="@drawable/logo"
+            />
+
+        <!-- Layout địa chỉ -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="14dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/locationlogo"
+                android:paddingRight="5dp"
+                />
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40 Trần Phú, Phường 4, Quận 5"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+        <!-- Layout số điện thoại -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/phoneIcon"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/phonelogo"
+                android:paddingRight="5dp"
+                />
+
+            <TextView
+                android:id="@+id/phoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0345233432"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Line chia header với nội dung-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <!-- Nội dung app -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textCTDH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiết đặt hàng"
+            android:textColor="#878787"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="true"
+            />
+
+        <TextView
+            android:id="@+id/textSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trà sữa truyền thống"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Size: "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/mucSizeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mức đường: "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/mucDuongText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mức đá: "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/mucDaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Topping: "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/themToppingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/buttonQuayLai"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Quay lại"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:backgroundTint ="@color/button_xemdiachi"
+                android:layout_marginRight="60dp"
+                />
+
+            <Button
+                android:id="@+id/buttonXacNhan"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="Xác nhận"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                android:backgroundTint ="@color/button_color"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
