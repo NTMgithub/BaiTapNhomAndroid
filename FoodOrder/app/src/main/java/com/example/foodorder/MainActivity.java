@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     toppings.add(cb_tranChanTrang.getText().toString());
                 }
                 if (cb_kemCheese.isChecked()){
-                    toppings.add(cb_kemCheese.getText().toString());
+                   toppings.add(cb_kemCheese.getText().toString());
                 }
                 if (cb_puddingPhoMai.isChecked()){
                     toppings.add(cb_puddingPhoMai.getText().toString());

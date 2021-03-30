@@ -13,7 +13,8 @@ import java.util.ArrayList;
 
 public class ChiTietDatHang extends AppCompatActivity {
     ArrayList<String> toppings = new ArrayList<String>();
-    Button btnQuayLai;
+    Button btnQuayLai, btnXacNhan;
+    String textSize, textDuong, textDa, textTopping;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +23,12 @@ public class ChiTietDatHang extends AppCompatActivity {
 
         Intent intent = getIntent();
         //get value
-        String textSize = intent.getStringExtra("text_size");
-        String textDuong = intent.getStringExtra("text_duong");
-        String textDa = intent.getStringExtra("text_da");
+        textSize = intent.getStringExtra("text_size");
+        textDuong = intent.getStringExtra("text_duong");
+        textDa = intent.getStringExtra("text_da");
         toppings = intent.getStringArrayListExtra("topping_list");
 
-        String textTopping = "";
+        textTopping = "";
         //convert ArrayList String sang String
         for (String s : toppings)
         {
@@ -47,6 +48,26 @@ public class ChiTietDatHang extends AppCompatActivity {
         //Hàm chạy khi nhấn nút "Quay lại"
         QuayLai();
 
+        //Hàm chạy khi nhấn nút "Xác nhận" -> Trang sms
+        XacNhan();
+
+    }
+
+    private void XacNhan() {
+        btnXacNhan = (Button) findViewById(R.id.buttonXacNhan);
+        btnXacNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChiTietDatHang.this, Gui_sms.class);
+                //gán dữ liệu
+                intent.putExtra("text_size", textSize);
+                intent.putExtra("text_duong", textDuong);
+                intent.putExtra("text_da", textDa);
+                intent.putExtra("topping_list", textTopping);
+
+                startActivity(intent);
+            }
+        });
     }
 
     public void QuayLai(){
@@ -57,10 +78,7 @@ public class ChiTietDatHang extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
-
 
 
 
