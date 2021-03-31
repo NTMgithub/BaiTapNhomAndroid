@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ChuyenDoiNhietDoGui</string>
+    <string name="c">Độ C:</string>
+    <string name="k_t_qu">Kết quả</string>
+    <string name="i">Đổi độ</string>
+    <string name="chuy_n">Chuyển</string>
+    <string name="nh_p_nhi_t">Nhập nhiệt độ</string>
+    <string name="f">Độ F:</string>
+    <string name="lichsu1">lichsu1</string>
+</resources>
