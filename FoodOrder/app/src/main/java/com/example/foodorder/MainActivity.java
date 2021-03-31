@@ -4,10 +4,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.QuickContactBadge;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -29,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         DatNgay();
     }
+    public void clicked_url(String url){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+    }
 
     private void DatNgay(){
         buttonDatNgay = (Button) findViewById(R.id.buttonDatNgay);
@@ -44,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
         cb_thachTraiCay = (CheckBox) findViewById(R.id.thachTraiCay);
         cb_banhFlan = (CheckBox) findViewById(R.id.banhFlan);
         cb_tranChauOkinawa = (CheckBox) findViewById(R.id.tranChauOkinawa);
+        findViewById(R.id.buttonXemDiaChi).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clicked_url("https://bitly.com.vn/4hogv1");
+
+            }
+        });
 
         buttonDatNgay.setOnClickListener(new View.OnClickListener(){
             @Override
