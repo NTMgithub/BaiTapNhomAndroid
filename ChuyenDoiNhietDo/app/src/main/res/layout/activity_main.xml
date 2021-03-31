@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chuyển đổi nhiệt độ C và F"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    //Row 1
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <TextView
+            android:id="@+id/DoC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/c"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Nhapnhietdo"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.195" />
+
+        <EditText
+            android:numeric="decimal"
+            android:id="@+id/Nhapnhietdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/nh_p_nhi_t"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/DoF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/DoC"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    //Row 2
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <TextView
+            android:id="@+id/DoF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/f"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/ketqua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DoC"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:focusable="false"
+            android:id="@+id/ketqua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:hint="@string/k_t_qu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/DoF"
+            app:layout_constraintTop_toBottomOf="@+id/Nhapnhietdo"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    //Row button
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <Button
+            android:id="@+id/chuyen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chuy_n"
+            android:backgroundTint="#676767"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ketqua"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/tinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i"
+            android:textSize="12dp"
+            android:textStyle=""
+            android:backgroundTint="#EA1313"
+            app:layout_constraintStart_toEndOf="@+id/DoF"
+            app:layout_constraintTop_toBottomOf="@+id/ketqua"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    //Row history
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lịch sử đổi"
+            android:textSize="20dp"
+            android:textColor="#4C4C4C"
+            android:textStyle="italic"
+            />
+
+        <EditText
+            android:id="@+id/history"
+            android:layout_width="309dp"
+            android:layout_height="200dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tinh"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
