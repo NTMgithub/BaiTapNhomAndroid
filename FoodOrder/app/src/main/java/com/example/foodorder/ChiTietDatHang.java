@@ -32,6 +32,8 @@ public class ChiTietDatHang extends AppCompatActivity {
         //convert ArrayList String sang String
         for (String s : toppings)
         {
+//            if ()
+
             textTopping += s + ", ";
         }
 
