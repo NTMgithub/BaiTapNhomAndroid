@@ -2,6 +2,7 @@ package com.example.chuyen_tien;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     TextView textView;
     EditText InputMoney;
+    ProgressDialog pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +106,17 @@ public class MainActivity extends AppCompatActivity {
 
     // hàm đọc rss để lấy dữ liệu rss
     private class ReadRSS extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // display a progress dialog for good user experiance
+            pDialog = new ProgressDialog(MainActivity.this);
+            pDialog.setMessage("Đang chuyển đổi...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+        }
+
         @Override
         protected String doInBackground(String... strings) {
             StringBuilder content = new StringBuilder();
@@ -127,6 +140,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            pDialog.dismiss();
+
             XMLDOMParser parser = new XMLDOMParser();
             Document document = null;
             try {
@@ -181,6 +196,16 @@ public class MainActivity extends AppCompatActivity {
     private class ReadHTML extends AsyncTask<String, Void, String> {
 
         @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // display a progress dialog for good user experiance
+            pDialog = new ProgressDialog(MainActivity.this);
+            pDialog.setMessage("Đang lấy dữ liệu...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+        }
+
+        @Override
         protected String doInBackground(String... strings) {
             StringBuilder content = new StringBuilder();
             try {
@@ -203,6 +228,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            pDialog.dismiss();
+
             org.jsoup.nodes.Document document = Jsoup.parse(s);
             org.jsoup.nodes.Element fxSidebarFrom = document.getElementById("fxSidebarFrom");
             // Lấy tag có id=fxSidebarFrom
