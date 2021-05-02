@@ -25,10 +25,12 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.xml.parsers.ParserConfigurationException;
 
 public class MainActivity extends AppCompatActivity {
+    public static ArrayList<String> lichsu;
     public static ArrayList<Tien> arrayListTien;
     static ArrayList<String> arrayList;
     static String url = "";
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         InputMoney = findViewById(R.id.money);
         arrayList = new ArrayList<>();
         arrayListTien = new ArrayList<>();
+        lichsu = new ArrayList<>();
         dropdown1 = (Spinner) findViewById(R.id.spinner1);
         dropdown2 = (Spinner) findViewById(R.id.spinner2);
         textView = findViewById(R.id.textViewtigia);
@@ -165,8 +168,9 @@ public class MainActivity extends AppCompatActivity {
                 float tienchuyendoi = chuyendoi(i1, i2);
                 String dau = arrayListTien.get(dropdown1.getSelectedItemPosition()).tientetat;
                 String duoi = arrayListTien.get(dropdown2.getSelectedItemPosition()).tientetat;
-                textView.append("\n" + String.valueOf(InputMoney.getText()) + " " + dau + " = " + String.valueOf(tienchuyendoi) + " " + duoi);
-
+                String str = "\n" + String.valueOf(InputMoney.getText()) + " " + dau + " = " + String.valueOf(tienchuyendoi) + " " + duoi;
+                textView.append(str);
+                lichsu.add(str);
                 Toast.makeText(MainActivity.this, String.valueOf(tienchuyendoi), Toast.LENGTH_SHORT).show();
 
             }
@@ -220,5 +224,25 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+
+    }
+    // hàm đọc lịch sử
+    private void showhistory()
+    {
+        findViewById(R.id.button_lichsu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(lichsu.size() == 0)
+                {
+                    textView.append("Không có lịch sử nào!\n");
+                }
+                else
+                {
+                    for (String str : lichsu) {
+                        textView.append(str);
+                    }
+                }
+            }
+        });
     }
 }
