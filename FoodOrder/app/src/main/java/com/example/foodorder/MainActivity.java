@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         cb_thachTraiCay = (CheckBox) findViewById(R.id.thachTraiCay);
         cb_banhFlan = (CheckBox) findViewById(R.id.banhFlan);
         cb_tranChauOkinawa = (CheckBox) findViewById(R.id.tranChauOkinawa);
+
         findViewById(R.id.buttonXemDiaChi).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
