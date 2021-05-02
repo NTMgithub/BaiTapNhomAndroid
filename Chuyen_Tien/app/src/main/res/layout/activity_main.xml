@@ -11,6 +11,17 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APP CHUYỂN ĐỔI TIỀN"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            />
 
         <EditText
 
@@ -47,6 +58,15 @@
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
 
+        <!--        <Button-->
+<!--            android:id="@+id/button_lichsu"-->
+<!--            android:layout_width="114dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="LỊCH SỬ"-->
+<!--            app:backgroundTint="#D18268"-->
+<!--            app:iconTint="#FFFFFF" />-->
+
         <Button
             android:id="@+id/button_convert"
             android:layout_width="wrap_content"
@@ -56,21 +76,39 @@
             app:backgroundTint="#009688"
             app:iconTint="#FFFFFF" />
 
-        <Button
+        <TextView
+
             android:id="@+id/button_lichsu"
-            android:layout_width="114dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="LỊCH SỬ"
+            android:text="LỊCH SỬ ĐỔI"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
             app:backgroundTint="#D18268"
+            android:textStyle="bold"
             app:iconTint="#FFFFFF" />
 
-        <TextView
+        <EditText
             android:id="@+id/textViewtigia"
             android:layout_width="match_parent"
-            android:layout_height="74dp"
+            android:layout_height="120dp"
+            android:focusable="false"
+            android:lines="10"
+            android:maxLines="10"
+            android:inputType="textMultiLine"
+            android:autofillHints=""
+            android:scrollbars="vertical"
+            android:imeOptions=""
+
             android:gravity="center"
-            android:text="--------------------------" />
+            android:background="@color/white"
+            android:textColor="@color/black"
+
+            android:text="-----------------"
+            />
+
 
 
     </LinearLayout>
