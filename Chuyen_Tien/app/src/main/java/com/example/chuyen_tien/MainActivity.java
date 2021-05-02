@@ -38,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
     Spinner dropdown1, dropdown2;
     ListView listView;
     ArrayAdapter<String> adapter;
+
     EditText textView;
+
+
     EditText InputMoney;
     ProgressDialog pDialog;
 
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         dropdown1 = (Spinner) findViewById(R.id.spinner1);
         dropdown2 = (Spinner) findViewById(R.id.spinner2);
         textView = findViewById(R.id.textViewtigia);
+        textViewls = findViewById(R.id.textViewlichsu);
 
 
         new ReadHTML().execute("https://www.fxexchangerate.com/currency-converter-rss-feed.html");
@@ -256,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 //    // hàm đọc lịch sử
 //    private void showhistory()
 //    {
@@ -275,4 +280,5 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //    }
+
 }
