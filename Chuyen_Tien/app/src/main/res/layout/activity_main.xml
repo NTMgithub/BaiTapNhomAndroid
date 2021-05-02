@@ -47,6 +47,15 @@
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
 
+        <!--        <Button-->
+<!--            android:id="@+id/button_lichsu"-->
+<!--            android:layout_width="114dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="LỊCH SỬ"-->
+<!--            app:backgroundTint="#D18268"-->
+<!--            app:iconTint="#FFFFFF" />-->
+
         <Button
             android:id="@+id/button_convert"
             android:layout_width="wrap_content"
@@ -56,19 +65,17 @@
             app:backgroundTint="#009688"
             app:iconTint="#FFFFFF" />
 
-        <Button
-            android:id="@+id/button_lichsu"
-            android:layout_width="114dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="LỊCH SỬ"
-            app:backgroundTint="#D18268"
-            app:iconTint="#FFFFFF" />
-
         <TextView
             android:id="@+id/textViewtigia"
             android:layout_width="match_parent"
-            android:layout_height="74dp"
+            android:layout_height="37dp"
+            android:gravity="center"
+            android:text="--------------------------" />
+
+        <TextView
+            android:id="@+id/textViewlichsu"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
             android:gravity="center"
             android:text="--------------------------" />
 

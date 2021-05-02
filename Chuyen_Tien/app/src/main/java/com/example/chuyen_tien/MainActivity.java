@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
     ArrayAdapter<String> adapter;
     TextView textView;
+    TextView textViewls;
     EditText InputMoney;
     ProgressDialog pDialog;
 
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         dropdown1 = (Spinner) findViewById(R.id.spinner1);
         dropdown2 = (Spinner) findViewById(R.id.spinner2);
         textView = findViewById(R.id.textViewtigia);
+        textViewls = findViewById(R.id.textViewlichsu);
 
 
         new ReadHTML().execute("https://www.fxexchangerate.com/currency-converter-rss-feed.html");
@@ -253,23 +255,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    // hàm đọc lịch sử
+     //hàm đọc lịch sử
     private void showhistory()
     {
-        findViewById(R.id.button_lichsu).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(lichsu.size() == 0)
-                {
-                    textView.append("Không có lịch sử nào!\n");
-                }
-                else
-                {
-                    for (String str : lichsu) {
-                        textView.append(str);
-                    }
-                }
+        if(lichsu.size() == 0)
+        {
+            textViewls.append("Không có kết quả chuyển đổi!");
+        }
+        else
+        {
+            for (String str : lichsu) {
+                textViewls.append(str);
             }
-        });
+        }
     }
 }
