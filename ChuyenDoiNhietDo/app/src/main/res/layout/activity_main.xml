@@ -50,6 +50,7 @@
             android:inputType="textPersonName"
             android:hint="@string/nh_p_nhi_t"
             android:textSize="20dp"
+
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/DoF"
             app:layout_constraintEnd_toEndOf="parent"
