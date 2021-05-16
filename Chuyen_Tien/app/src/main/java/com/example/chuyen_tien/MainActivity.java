@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         dropdown1 = (Spinner) findViewById(R.id.spinner1);
         dropdown2 = (Spinner) findViewById(R.id.spinner2);
         textView = findViewById(R.id.textViewtigia);
-        textViewls = findViewById(R.id.textViewlichsu);
+        //textViewls = findViewById(R.id.textViewlichsu);
 
 
         new ReadHTML().execute("https://www.fxexchangerate.com/currency-converter-rss-feed.html");

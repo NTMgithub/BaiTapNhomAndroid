@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 //Khởi tạo một biến String để chứa data json all
                 String line = "";
 
-                //Vòng while đọc dữ liệu từ BufferedReader, gán vào String line
+                //Vòng while đọc dữ liệu từ BufferedReader, gán vào String content
                 while ( (line = bufferedReader.readLine()) != null ){
                     content.append(line);
                 }
