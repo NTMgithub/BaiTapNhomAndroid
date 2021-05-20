@@ -2,10 +2,19 @@ package com.example.appchuphinh;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+<<<<<<< HEAD
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+=======
+>>>>>>> a5dd740eb89fb63be295ec8344706249dae02afb
 
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+<<<<<<< HEAD
+import android.app.PendingIntent;
+=======
+>>>>>>> a5dd740eb89fb63be295ec8344706249dae02afb
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -38,11 +47,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean check) {
                 if (check) {
-                    //Toast.makeText(MainActivity.this, "OK", Toast.LENGTH_LONG).show();
-                    sendNotification();
+                    Toast.makeText(MainActivity.this, "Bật nhận thông báo!", Toast.LENGTH_LONG).show();
+                    Notification();
                 } else {
-                    Toast.makeText(MainActivity.this, "NO", Toast.LENGTH_LONG).show();
-                }
+                    Toast.makeText(MainActivity.this, "Tắt nhận thông báo!", Toast.LENGTH_LONG).show();
             }
         });
         btn.setOnClickListener(new View.OnClickListener() {
@@ -64,13 +72,18 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void sendNotification() {
-        Notification notification = new Notification.Builder(this)
-                .setContentTitle("App Chụp Hình")
-                .setContentText("Bạn có lịch chụp hình hôm nay")
+    private void Notification() {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_launcher_background)
-                .build();
-        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        notification.notify();
+                .setContentTitle("My notification")
+                .setContentText("Much longer text that cannot fit one line...")
+                .setStyle(new NotificationCompat.BigTextStyle()
+                        .bigText("Much longer text that cannot fit one line..."))
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+
+// notificationId is a unique int for each notification that you must define
+        notificationManager.notify(Integer.parseInt("notificationId"), builder.build());
+
     }
 }

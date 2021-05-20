@@ -29,7 +29,11 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
+    implementation "com.android.support:support-compat:28.0.0"
+=======
 
+>>>>>>> a5dd740eb89fb63be295ec8344706249dae02afb
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
